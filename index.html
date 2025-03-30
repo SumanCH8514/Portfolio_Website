@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suman Portfolio | SumanOnline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+15&family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div
+          class="left"
+          style="
+            text-shadow: 0px 0px 10px rgba(255, 0, 0, 1),
+              0px 0px 20px rgba(145, 255, 0, 0.8),
+              0px 0px 30px rgba(255, 0, 0, 0.6);
+          "
+        >
+          Suman Portfolio
+        </div>
+        <div class="right">
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="firstsection">
+        <div class="leftsection">
+          <h1>Hi, My Name Is <span class="purple">Suman</span></h1>
+          <p>I Am A Passionate Developer From Kolkata.</p>
+          <p id="element"></p>
+          <div>
+            <button class="btn">Download Resume</button>
+            <button class="btn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="./assets/img/suman.png" alt="Suman Image" />
+        </div>
+      </section>
+      <hr />
+      <section id="about" class="secondsection">
+        <p class="text-gray">Little more about me</p>
+        <h1>About Me</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <!-- <span class="date">2022-2023</span> -->
+            <h2>Personal Info</h2>
+            <p>
+              Assisted in the development of a web application using HTML, CSS,
+              and JavaScript. Gained experience in front-end development and
+              version control with Git.
+            </p>
+            <p>
+              Assisted in the development of a web application using HTML, CSS,
+              and JavaScript. Gained experience in front-end development and
+              version control with Git.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="Experience" class="secondsection">
+        <p class="text-gray">What I Have Done So Far</p>
+        <h1>Experience</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="date">2022-2023</span>
+            <h2>BCA Intern</h2>
+            <p>
+              Assisted in the development of a web application using HTML, CSS,
+              and JavaScript. Gained experience in front-end development and
+              version control with Git.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="date">2023-2024</span>
+            <h2>Freelance Web Developer</h2>
+            <p>
+              Designed and developed responsive websites for small businesses.
+              Projects included an e-commerce site and a portfolio website.
+              Improved skills in client communication and project management.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="date">2024-Present</span>
+            <h2>Software Developer (Part-time)</h2>
+            <p>
+              Currently working part-time on a team developing a new student
+              management system. Contributing to both front-end and back-end
+              development using technologies like React and Node.js.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="secondsection">
+        <p class="text-gray">What I Have Done So Far</p>
+        <h1>Projects</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="date">project date</span>
+            <h2>Projects name</h2>
+            <p>project details......</p>
+            <p class="view_vroject"><a href="#">View Project</a></p>
+          </div>
+          <div class="timeline-item">
+            <span class="date">project date</span>
+            <h2>Projects name</h2>
+            <p>project details......</p>
+            <p class="view_vroject"><a href="#">View Project</a></p>
+          </div>
+          <div class="timeline-item">
+            <span class="date">project date</span>
+            <h2>Projects name</h2>
+            <p>project details......</p>
+            <p class="view_vroject"><a href="#">View Project</a></p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="secondsection">
+        <p class="text-gray">Contact me if you have quary</p>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            autocomplete="name"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autocomplete="email"
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p
+          id="responseMessage"
+          style="display: none; color: green; margin-top: 10px"
+        ></p>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div id="footerABC">
+          <h3
+            style="
+              text-decoration: underline;
+              text-shadow: 1px 1px 1px rgba(0, 170, 255, 0.3),
+                2px 2px 2px rgba(0, 170, 255, 0.3),
+                3px 3px 3px rgba(0, 170, 255, 0.3);
+            "
+          >
+            Suman Developer
+          </h3>
+          <img src="./assets/img/slider-img1.png" id="imgposter" alt="" />
+          <table style="margin: auto">
+            <tr>
+              <th style="text-align: left">Mobile No:</th>
+              <td style="text-align: left">
+                <a href="tel:+918918153949">+918918153949</a>
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: left">Email:</th>
+              <td style="text-align: left">
+                <a href="mailto:contact@SumanOnline.Com">Send email</a>
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: left">WhatsApp:</th>
+              <td style="text-align: left">
+                &nbsp;&nbsp;<a
+                  href="https://api.whatsapp.com/send/?phone=%2B918918153949&text=I%27m+interested+to+work+with+you&type=phone_number&app_absent=0"
+                  target="_blank"
+                  >Click</a
+                >
+              </td>
+            </tr>
+          </table>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="https://twitter.com" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h3>Special Links</h3>
+          <ul>
+            <li><a href="https://sumanonline.com/">SumanOnline.Com</a></li>
+            <li>
+              <a href="https://sumanonline.likesyou.org/"
+                >SumanOnline.Likesyou.Org</a
+              >
+            </li>
+            <li>
+              <a href="https://suman-projects.web.app/"
+                >Suman-projests.web.app</a
+              >
+            </li>
+            <li>
+              <a href="https://sumanonline.likesyou.org/mp3-tag-editor/"
+                >Mp3 Tag Editor</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        &copy;
+        <a href="#" style="text-decoration: none; font-weight: bold"
+          >Suman Portfolio</a
+        >
+        | All Right Reserved
+      </p>
+    </footer>
+    <div id="footer">
+      <p style="font-size: 0.7rem; text-align: center">
+        &copy; 2018-<span id="copyright"></span>
+        <span id="copyright">
+          <script>
+            document
+              .getElementById("copyright")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script>
+        </span>
+        <a
+          href="https://sumanonline.com "
+          target="_blank"
+          style="text-decoration: none; font-weight: bold"
+          >SumanOnline.com</a
+        >
+        | All Rights Reserved.
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
