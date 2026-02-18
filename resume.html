@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Suman Portfolio - Professional Resume" />
+    <title>Suman Portfolio | Resume</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="glass-header">
+        <nav>
+            <a href="index.html" class="logo">Suman<span class="highlight">Portfolio</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="https://blogs.sumanonline.com/" target="_blank">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="resume" class="section" style="margin-top: 2rem;">
+            <h2 class="section-title">My Resume</h2>
+
+            <div class="resume-grid">
+
+                <!-- Column 1: Work History & Education -->
+                <div class="resume-column">
+
+                    <div class="glass-card resume-section">
+                        <h3 class="resume-header"><i class="fa-solid fa-briefcase"></i> Work History</h3>
+
+                        <div class="timeline-item resume-item">
+                            <div class="timeline-content no-border">
+                                <span class="date">2024 - Present</span>
+                                <h4>Software Developer (Part-time)</h4>
+                                <p class="company">Student Management System</p>
+                                <p>Contributing to a student management system using React and Node.js. Implementing new
+                                    features and optimizing database queries.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item resume-item">
+                            <div class="timeline-content no-border">
+                                <span class="date">2023 - 2024</span>
+                                <h4>Freelance Web Developer</h4>
+                                <p class="company">Self-Employed</p>
+                                <p>Designed and developed responsive websites for small businesses, including e-commerce
+                                    and portfolios. Managed client requirements and delivery timelines.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item resume-item">
+                            <div class="timeline-content no-border">
+                                <span class="date">2022 - 2023</span>
+                                <h4>BCA Intern</h4>
+                                <p class="company">Tech Firm</p>
+                                <p>Assisted in web application development and gained version control experience with
+                                    Git. Collaborated with senior developers on frontend tasks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card resume-section">
+                        <h3 class="resume-header"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+
+                        <div class="resume-item">
+                            <span class="date">2022 - 2025 (Expected)</span>
+                            <h4>Bachelor of Computer Applications (BCA)</h4>
+                            <p class="company">University of Kolkata</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <span class="date">2020 - 2022</span>
+                            <h4>Higher Secondary (Science)</h4>
+                            <p class="company">Kolkata Board</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Column 2: Skills & Certifications -->
+                <div class="resume-column">
+
+                    <div class="glass-card resume-section">
+                        <h3 class="resume-header"><i class="fa-solid fa-code"></i> Developer Skills</h3>
+
+                        <div class="skill-group">
+                            <h4>Frontend</h4>
+                            <div class="skills-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript (ES6+)</span>
+                                <span>React.js</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4>Backend</h4>
+                            <div class="skills-tags">
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4>Tools</h4>
+                            <div class="skills-tags">
+                                <span>Git & GitHub</span>
+                                <span>VS Code</span>
+                                <span>Postman</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card resume-section">
+                        <h3 class="resume-header"><i class="fa-solid fa-pen-nib"></i> Design Skills</h3>
+                        <div class="skills-tags">
+                            <span>Figma</span>
+                            <span>Adobe Photoshop</span>
+                            <span>Canva</span>
+                            <span>UI/UX Principles</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card resume-section">
+                        <h3 class="resume-header"><i class="fa-solid fa-language"></i> Languages</h3>
+                        <ul class="language-list">
+                            <li>English (Professional)</li>
+                            <li>Bengali (Native)</li>
+                            <li>Hindi (Conversational)</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <a href="./assets/media/resume.pdf" download class="btn btn-primary btn-block"><i
+                                class="fa-solid fa-download"></i> Download PDF Resume</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Suman Developer</h3>
+                <p>Building the future, one pixel at a time.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://sumanonline.com/">SumanOnline.Com</a></li>
+                    <li><a href="https://sumanonline.likesyou.org/">SumanOnline.Likesyou.Org</a></li>
+                    <li><a href="https://suman-projects.web.app/">Suman-projects.web.app</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-phone"></i> +91 8918153949</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@SumanOnline.Com</p>
+                <a href="https://api.whatsapp.com/send/?phone=%2B918918153949&text=Hello" target="_blank"
+                    class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Suman Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
