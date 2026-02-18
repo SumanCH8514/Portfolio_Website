@@ -168,3 +168,95 @@ document.addEventListener("click", (e) => {
     icon.classList.add("fa-bars");
   }
 });
+
+// Project Details Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Create Modal HTML if not exists
+  if (!document.querySelector('.modal')) {
+    const modalHTML = `
+        <div id="projectModal" class="modal">
+            <div class="modal-content glass-card">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-img-container">
+                        <img src="" alt="Project Image" id="modalImg">
+                    </div>
+                    <div class="modal-info">
+                        <h3 id="modalTitle">Project Title</h3>
+                        <div class="modal-tech-stack" id="modalTech">
+                            <!-- Tech tags injected here -->
+                        </div>
+                        <p class="modal-desc" id="modalDesc">Description goes here...</p>
+                        <a href="#" target="_blank" class="btn btn-primary" id="modalLink">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+
+  const modal = document.querySelector('.modal');
+  const closeBtn = document.querySelector('.close-modal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalImg = document.getElementById('modalImg');
+  const modalTech = document.getElementById('modalTech');
+  const modalLink = document.getElementById('modalLink');
+
+  // 2. Open Modal
+  document.querySelectorAll('.project-card-trigger').forEach(card => {
+    card.addEventListener('click', () => {
+      // Get data
+      const title = card.getAttribute('data-title');
+      const desc = card.getAttribute('data-desc');
+      const tech = card.getAttribute('data-tech');
+      const link = card.getAttribute('data-link');
+      const img = card.getAttribute('data-img');
+
+      // Populate Modal
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modalImg.src = img || 'https://via.placeholder.com/800x400'; // Fallback
+      modalLink.href = link;
+
+      // Tech Tags
+      modalTech.innerHTML = '';
+      if (tech) {
+        tech.split(',').forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'modal-tech-tag';
+          span.textContent = t.trim();
+          modalTech.appendChild(span);
+        });
+      }
+
+      // Show
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Disable scroll
+    });
+  });
+
+  // 3. Close Modal
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  // Close on outside click
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
